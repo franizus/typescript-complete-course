@@ -32,7 +32,7 @@ class Person implements NamedPerson {
 
     greet(lastName: string) {
         console.log("Hi, I am " + this.firstName + " " + lastName);
-    };
+    }
 }
 
 const myPerson = new Person();
@@ -41,19 +41,17 @@ myPerson.lastName = "Anything";
 greet(myPerson);
 myPerson.greet(myPerson.lastName);
 
-
 // Function Types
 interface DoubleValueFunc {
     (number1: number, number2: number): number;
 }
 
 let myDoubleFunction: DoubleValueFunc;
-myDoubleFunction = function (value1: number, value2: number) {
+myDoubleFunction = function(value1: number, value2: number) {
     return (value1 + value2) * 2;
 };
 
 console.log(myDoubleFunction(10, 20));
-
 
 // Interface Inheritance
 interface AgedPerson extends NamedPerson {
