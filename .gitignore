@@ -1,3 +1,7 @@
 node_modules
 package-lock.json
 *.js
+
+!exercise.js
+!exercise3.js
+!exercise4.js
