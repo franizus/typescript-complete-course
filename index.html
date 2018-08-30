@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,16 @@
     <title>Learning TypeScript</title>
     <script src="node_modules/systemjs/dist/system.js"></script>
 </head>
+
 <body>
+    <div id="app">Change it with jQuery</div>
     <script>
         SystemJS.config({
             packages: {
                 '/': {
+                    map: {
+                        "jQuery": "node_modules/jquery/dist/jquery.min.js"
+                    },
                     defaultExtension: 'js'
                 }
             }
@@ -19,4 +25,5 @@
         SystemJS.import('app.js');
     </script>
 </body>
+
 </html>
